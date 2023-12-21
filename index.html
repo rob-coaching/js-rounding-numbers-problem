@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="demo-1">
+    <h2>Adding ugly</h2>
+    <input type="text" value="1"/><button>Add</button>
+    <div>(not rounding)</div>
+  </div>
+  <div class="demo-2">
+    <h2>Adding polished</h2>
+    <input type="text" VALUE="1"/><button>Add</button>
+    <div>(using toFixed(2))</div>
+  </div>
+
+  <script>
+    const input1 = document.querySelector("div.demo-1 input")
+    const btn1 = document.querySelector("div.demo-1 button")
+    const input2 = document.querySelector("div.demo-2 input")
+    const btn2 = document.querySelector("div.demo-2 button")
+    console.log(btn1, input1)
+
+    btn1.addEventListener("click", () => {
+      input1.value = Number(input1.value) + 0.01
+    })
+    btn2.addEventListener("click", () => {
+      input2.value = (Number(input2.value) + 0.01).toFixed(2)
+    })
+
+  </script>
+
+</body>
+
+</html>
